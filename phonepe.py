@@ -9,7 +9,7 @@ from PIL import Image
 
 
 
-### dataframe creation
+# dataframe creation
 
 mydb=psycopg2.connect(host ="localhost",
                       user="postgres",
@@ -96,7 +96,9 @@ top_user=pd.DataFrame(table9,columns=("States", "Years", "Quarters", "Pincodes",
 
 
 
+# USER DEFINE FUNCTIONS
 
+# Aggregated Transaction amount
 
 def Transaction_amount_count_Y(df, year):
 
@@ -150,6 +152,8 @@ def Transaction_amount_count_Y(df, year):
     return tacy
 
 
+# Aggregated Transaction Count
+
 def Transaction_amount_count_Y_Q(df, quarter):
     tacy=df[df["Quarters"] == quarter]
     tacy.reset_index(drop=True,inplace=True)
@@ -199,6 +203,7 @@ def Transaction_amount_count_Y_Q(df, quarter):
     return tacy
 
 
+# Aggregated Transaction Count
 
 def Aggre_Tran_Transaction_type(df, state):
 
@@ -502,6 +507,7 @@ def top_chart_transaction_amount(table_name):
 
     #######
 
+# Top User Functions 1
 
 def top_chart_transaction_count(table_name):
     mydb=psycopg2.connect(host ="localhost",
@@ -576,6 +582,7 @@ def top_chart_transaction_count(table_name):
 
 ###########################################
 
+# Top User Functions 2
 
 def top_chart_registered_user(table_name, state):
 
@@ -653,6 +660,7 @@ def top_chart_registered_user(table_name, state):
 
     #######################
 
+# Top User Functions 3
 
 def top_chart_appopens(table_name, state):
 
@@ -730,6 +738,9 @@ def top_chart_appopens(table_name, state):
 
 
     ##########################
+
+# Top User Functions 4
+
 
 
 def top_chart_registered_user(table_name):
