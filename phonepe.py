@@ -15,7 +15,7 @@ mydb=psycopg2.connect(host ="localhost",
                       user="postgres",
                       port="5432",
                       database="phonepe_data",
-                      password="Rishab@90")
+                      password="XXX")
 
 cursor = mydb.cursor()
 
